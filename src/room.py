@@ -5,4 +5,5 @@ class Room():
         self.song_list = []
         self.capacity = 20
         self.fee = 500
+        self.till = 150
         
