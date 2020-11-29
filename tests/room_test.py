@@ -12,7 +12,7 @@ class TestRoom(unittest.TestCase):
         self.assertEqual("Pink_room", self.room.name)
 
     def test_room_has_song_list(self):
-        self.assertEqual([], self.room.song_list)
+        self.assertEqual(["Halo", "Radioactive", "Firework"], self.room.song_list)
 
     def test_room_has_guest_list(self):
         self.assertEqual([], self.room.guest_list)
@@ -25,3 +25,5 @@ class TestRoom(unittest.TestCase):
 
     def test_room_has_a_till(self):
         self.assertEqual(150, self.room.till)
+
+    
