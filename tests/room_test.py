@@ -10,3 +10,6 @@ class TestRoom(unittest.TestCase):
 
     def test_room_has_name(self):
         self.assertEqual("Pink_room", self.room.name)
+
+    def test_room_has_song_list(self):
+        self.assertEqual([], self.room.song_list)
