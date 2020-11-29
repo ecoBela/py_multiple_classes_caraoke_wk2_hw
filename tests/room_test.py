@@ -19,3 +19,6 @@ class TestRoom(unittest.TestCase):
 
     def test_set_room_capacity(self):
         self.assertEqual(20, self.room.capacity)
+
+    def test_set_room_fee(self):
+        self.assertEqual(500, self.room.fee)
