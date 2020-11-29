@@ -13,3 +13,6 @@ class TestRoom(unittest.TestCase):
 
     def test_room_has_song_list(self):
         self.assertEqual([], self.room.song_list)
+
+    def test_room_has_guest_list(self):
+        self.assertEqual([], self.room.guest_list)
