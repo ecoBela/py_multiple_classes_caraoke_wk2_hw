@@ -12,7 +12,6 @@ class TestRoom(unittest.TestCase):
         self.song_2 = Song("Living la vida loca", "Ricky Martin")
         self.guest = Guest("Superman", 600, "Bootilicious")
 
-
     def test_room_has_name(self):
         self.assertEqual("Pink_room", self.room_1.room_name)
 
@@ -23,21 +22,21 @@ class TestRoom(unittest.TestCase):
         self.assertEqual(400, self.room_1.rate["large"])
         self.assertEqual(200, self.room_2.rate["small"])
 
-    # def test_room_has_song_list(self):
-    #     self.assertEqual([], self.room.song_list)
-
-    # def test_room_has_guest_list(self):
-    #     self.assertEqual([], self.room.guest_list)
-
-    
-
     def test_room_has_a_till(self):
         self.assertEqual(150, self.room_1.till)
 
-    # def test_add_song_to_room(self):
-    #     self.assertEqual("Halo", add_song_to_room(self.song))
+    def test_room_has_song_list(self):
+        self.assertEqual([], self.room_1.song_list)
 
-    # def test_play_song_if_on_playlist(self):
-    #     self.assertEqual("Halo", self.room.play_song(self.song_1))
+    def test_room_has_guest_list(self):
+        self.assertEqual([], self.room_1.guest_list)
 
+    def test_room_can_add_to_song_list(self):
+        self.room_1.add_song_to_list(self.song_1)
+        self.assertEqual(1, len(self.room_1.song_list))
+
+    def test_room_can_add_to_guestlist(self):
+        self.room_1.add_to_guestlist(self.guest)
+        self.assertEqual(1, len(self.room_1.guest_list))
+    
     
