@@ -40,6 +40,11 @@ class TestRoom(unittest.TestCase):
         self.room_1.add_to_guestlist(self.guest)
         self.assertEqual(1, len(self.room_1.guest_list))
 
+    def test_room_can_add_to_guestlist_if_capacity(self):
+        self.room_1.add_to_guestlist_if_capacity(self.guest)
+        self.room_1.add_to_guestlist_if_capacity(self.guest2)
+        self.assertEqual(2, len(self.room_1.guest_list))
+
     def test_room_can_remove_from_guestlist(self):
         self.room_1.add_to_guestlist(self.guest)
         self.room_1.remove_from_guestlist(self.guest)

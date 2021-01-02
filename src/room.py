@@ -19,8 +19,14 @@ class Room():
     def add_to_guestlist(self, guest):
         self.guest_list.append(guest)
 
+    def add_to_guestlist_if_capacity(self, guest):
+        if len(self.guest_list) <= self.capacity:
+            self.guest_list.append(guest)
+
     def remove_from_guestlist(self, guest):
         self.guest_list.remove(guest)
+
+    
 
     
 
