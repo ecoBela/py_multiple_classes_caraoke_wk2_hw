@@ -53,5 +53,6 @@ class TestRoom(unittest.TestCase):
     def test_charge_guest_for_room(self):
         self.room_1.add_to_till(self.guest)
         self.assertEqual(550, self.room_1.till)
+        self.assertEqual(200, self.guest.cash_amount)
 
     
