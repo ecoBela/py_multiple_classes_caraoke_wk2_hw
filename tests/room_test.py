@@ -11,6 +11,7 @@ class TestRoom(unittest.TestCase):
         self.song_1 = Song("Halo", "Beyonce")
         self.song_2 = Song("Living la vida loca", "Ricky Martin")
         self.guest = Guest("Superman", 600, "Bootilicious")
+        self.guest2 = Guest("Mariah", 750, "All I want for Christmas")
 
     def test_room_has_name(self):
         self.assertEqual("Pink_room", self.room_1.room_name)
@@ -38,5 +39,8 @@ class TestRoom(unittest.TestCase):
     def test_room_can_add_to_guestlist(self):
         self.room_1.add_to_guestlist(self.guest)
         self.assertEqual(1, len(self.room_1.guest_list))
-    
-    
+
+    def test_room_can_remove_from_guestlist(self):
+        self.room_1.add_to_guestlist(self.guest)
+        self.room_1.remove_from_guestlist(self.guest)
+        self.assertEqual(0, len(self.room_1.guest_list))

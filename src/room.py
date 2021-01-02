@@ -19,6 +19,8 @@ class Room():
     def add_to_guestlist(self, guest):
         self.guest_list.append(guest)
 
+    def remove_from_guestlist(self, guest):
+        self.guest_list.remove(guest)
 
     
 
