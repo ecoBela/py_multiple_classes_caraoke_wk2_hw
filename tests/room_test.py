@@ -49,3 +49,9 @@ class TestRoom(unittest.TestCase):
         self.room_1.add_to_guestlist(self.guest)
         self.room_1.remove_from_guestlist(self.guest)
         self.assertEqual(0, len(self.room_1.guest_list))
+
+    def test_charge_guest_for_room(self):
+        self.room_1.add_to_till(self.guest)
+        self.assertEqual(550, self.room_1.till)
+
+    

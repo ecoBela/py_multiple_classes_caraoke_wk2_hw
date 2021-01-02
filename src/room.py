@@ -26,6 +26,13 @@ class Room():
     def remove_from_guestlist(self, guest):
         self.guest_list.remove(guest)
 
+    def add_to_till(self, guest):
+        guest.cash_amount -= self.rate["large"]
+        self.till += self.rate["large"]
+
+
+    
+
     
 
     
